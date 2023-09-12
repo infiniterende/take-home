@@ -1,0 +1,7 @@
+# Development Plan
+
+I first examined the files relevant to the features I needed to develop. I began with App.tsx, which described the functions I need to implement, including the useCandidates hook, the onSelect function, and the Candidate List component. I started with the useCandidates hook, which was a simple matter of implementing a state for the candidates to exist on our app. I updated the candidates state with the fetched data from the backend API and called it in an useEffect hook. I returned the modularized function and data to the hook. 
+
+The next step was to write the Candidates List function. I chose to do this next because I wanted to see the populated data on the front end. I mapped through the candidates that were passed into the function by the useCandidates hook and was able to view the plot and the data points. The next step was to write the onSelect function so that when the checkboxes are checked, the plot will be updated with the relevant data points. I mapped through the candidates and set their selected attribute to opposite of its original value. I then called the update API in my select function, which sent the updated params to the backend API. 
+
+The last step was making sure that after the max selection, no other points can be checked off. This was a matter of setting the disabled attribute in my input component to equal true when the selected number of candidates exceeds the maximum selection. 
